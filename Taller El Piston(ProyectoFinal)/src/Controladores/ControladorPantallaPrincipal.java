@@ -16,7 +16,7 @@ import java.awt.event.ActionListener;
 public class ControladorPantallaPrincipal implements ActionListener{
     
     JFPantallaPrincipal VistaPrincipal = new JFPantallaPrincipal();
-    
+    JDAutomoviles VistaAutos;
     public ControladorPantallaPrincipal(JFPantallaPrincipal VistaPrincipal){
         
         this.VistaPrincipal = VistaPrincipal;
@@ -28,7 +28,12 @@ public class ControladorPantallaPrincipal implements ActionListener{
     }
     
     public void actionPerformed(ActionEvent E){
-        
+        if(VistaPrincipal.btnAgregarAuto == E.getSource()){
+            
+            VistaAutos = new JDAutomoviles(VistaPrincipal, true);
+            VistaAutos.setLocationRelativeTo(null);
+            VistaAutos.setVisible(true);
+        }
     }
     
 }
