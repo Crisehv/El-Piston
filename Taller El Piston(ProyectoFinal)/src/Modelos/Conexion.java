@@ -10,7 +10,7 @@ public class Conexion {
         try
         {
             Class.forName("com.mysql.jdbc.Driver"); 
-            conn = DriverManager.getConnection("jdbc:mysql://secure172.inmotionhosting.com:3306/nitrow5_tallerelpiston","nitrow5_umg4","@E4umg"); 
+            conn = DriverManager.getConnection("jdbc:mysql://secure172.inmotionhosting.com:3306/nitrow5_tallerelpistonumg","nitrow5_umg4","@E4umg"); 
             System.out.println("Se ha conectado correctamente a la base de datos"); 
         }catch(Exception e)
         {
