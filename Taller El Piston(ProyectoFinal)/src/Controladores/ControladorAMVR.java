@@ -37,6 +37,54 @@ public class ControladorAMVR implements ActionListener{
             JOptionPane.showMessageDialog(null, "Hubo un error"+E);
         }
          /////
+        
+        
+         ////busquda 
+
+        AsignarMecanicoVehiculoRepararDAO productoAbuscar2=new AsignarMecanicoVehiculoRepararDAO();
+        
+        ArrayList<AsignarMecanicoVehiculoRepararDAO> productosencontrados2;
+      
+       productosencontrados2=productoAbuscar2.Busquedageneral2();
+        try
+        {
+            for(int i=0;i<productosencontrados2.size();i++)
+            {
+                AsignarMecanicoVehiculoRepararDAO NuevoProducto=new AsignarMecanicoVehiculoRepararDAO(productosencontrados2.get(i).getNombre(),productosencontrados2.get(i).getDpimecanico1());
+                VistaAMVR.JCmecanico.addItem(NuevoProducto);
+            }
+  
+        }
+        catch(Exception E)
+        {
+            JOptionPane.showMessageDialog(null, "Hubo un error "+E);
+        }
+         /////
+        
+        
+          ////busquda 
+
+        AsignarMecanicoVehiculoRepararDAO productoAbuscar3=new AsignarMecanicoVehiculoRepararDAO();
+        
+        ArrayList<AsignarMecanicoVehiculoRepararDAO> productosencontrados3;
+      
+       productosencontrados3=productoAbuscar3.Busquedageneral3();
+        try
+        {
+            for(int i=0;i<productosencontrados3.size();i++)
+            {
+                AsignarMecanicoVehiculoRepararDAO NuevoProducto=new AsignarMecanicoVehiculoRepararDAO(productosencontrados3.get(i).getNombre(),productosencontrados3.get(i).getDpimecanico1());
+                VistaAMVR.JCidfalla.addItem(NuevoProducto);
+            }
+  
+        }
+        catch(Exception E)
+        {
+            JOptionPane.showMessageDialog(null, "Hubo un error "+E);
+        }
+         /////
+        
+        
  
      }
      

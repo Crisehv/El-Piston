@@ -31,6 +31,9 @@ public class AsignarMecanicoVehiculoRepararDAO {
     /////////////datos para buscar
     String dpimecanico1;
     String nombre;
+     String dpimecanico2;
+    String apellidos;
+    
     public AsignarMecanicoVehiculoRepararDAO(String dpimecanico1, String nombre) {
         this.dpimecanico1 = dpimecanico1;
         this.nombre = nombre;
@@ -56,15 +59,7 @@ public class AsignarMecanicoVehiculoRepararDAO {
 
     public AsignarMecanicoVehiculoRepararDAO() {
     }
-    
-    
-    
-    
-    
-    
-    
-    
-    
+  
     
    public void Asignacion(String placa,String dpiMecanico,int idFalla)
     {
@@ -118,19 +113,91 @@ public class AsignarMecanicoVehiculoRepararDAO {
                return null;
            }     
           }
-          @Override
+         
+        
+           
+           
+           ////////////
+       
+         public ArrayList<AsignarMecanicoVehiculoRepararDAO> Busquedageneral2()
+          {
+           try{
+            conex.conectar();
+            conn = conex.getConexion();
+            Statement comando = conn.createStatement();
+            ArrayList<AsignarMecanicoVehiculoRepararDAO> ListaProductos=new ArrayList<AsignarMecanicoVehiculoRepararDAO>();
+            
+            //buscar
+            consulta=comando.executeQuery("select dpiMecanico, apellidos from mecanicos");
+            
+            if(consulta.next())
+            {
+                do{
+                    AsignarMecanicoVehiculoRepararDAO nuevoProducto=new AsignarMecanicoVehiculoRepararDAO(consulta.getString("dpiMecanico"),consulta.getString("apellidos"));
+                    ListaProductos.add(nuevoProducto);
+                }while(consulta.next());
+                return ListaProductos;
+            }
+            else return null;
+            
+            
+            
+           }
+           catch(Exception e)
+           {
+               JOptionPane.showMessageDialog(null,"ocurrio un error" );
+               return null;
+           }     
+          }
+           ////////////
+       
+         public ArrayList<AsignarMecanicoVehiculoRepararDAO> Busquedageneral3()
+          {
+           try{
+            conex.conectar();
+            conn = conex.getConexion();
+            Statement comando = conn.createStatement();
+            ArrayList<AsignarMecanicoVehiculoRepararDAO> ListaProductos=new ArrayList<AsignarMecanicoVehiculoRepararDAO>();
+            
+            //buscar
+            consulta=comando.executeQuery("select idFalla, fecha from fallas");
+            
+            if(consulta.next())
+            {
+                do{
+                    AsignarMecanicoVehiculoRepararDAO nuevoProducto=new AsignarMecanicoVehiculoRepararDAO(consulta.getString("idFalla"),consulta.getString("fecha"));
+                    ListaProductos.add(nuevoProducto);
+                }while(consulta.next());
+                return ListaProductos;
+            }
+            else return null;
+            
+            
+            
+           }
+           catch(Exception e)
+           {
+               JOptionPane.showMessageDialog(null,"ocurrio un error" );
+               return null;
+           }     
+          }
+            @Override
            
            public String toString ()
            {
               return nombre;
                               
             }
-        
-           
-           
-           ////////////
-       
-        
+           public String toString2 ()
+           {
+              return nombre;
+                              
+            }
+            public String toString3 ()
+           {
+              return nombre;
+                              
+            }
    
    
 }

@@ -49,15 +49,11 @@ public class JDvistaAMVR extends javax.swing.JDialog {
 
         jLabel5.setText("Placa:");
 
-        JCmecanico.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "230561641" }));
-
-        jLabel1.setText("Mecanico: ");
+        jLabel1.setText("dpiMecanico: ");
 
         cmdamvr.setText("Guardar");
 
         jLabel4.setText("Reparaciones");
-
-        JCidfalla.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "1" }));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -80,7 +76,7 @@ public class JDvistaAMVR extends javax.swing.JDialog {
                             .addComponent(JCmecanico, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(JCplaca, 0, 189, Short.MAX_VALUE)
                             .addComponent(JCidfalla, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
-                .addContainerGap(88, Short.MAX_VALUE))
+                .addContainerGap(74, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
