@@ -71,8 +71,8 @@ public class AsignarMecanicoVehiculoRepararDAO {
         try
         {
             
-            JOptionPane.showMessageDialog(null, conex.conectar());
-            conn=conex.getConexion();
+            
+            conn=conex.obtenerConexion();
             Statement comando=conn.createStatement();
             comando.executeUpdate("insert into asignaciones() values(NULL,'"+placa+"','"+dpiMecanico+"','"+idFalla+"')");
         }
@@ -87,7 +87,7 @@ public class AsignarMecanicoVehiculoRepararDAO {
           {
            try{
             conex.conectar();
-            conn = conex.getConexion();
+            conn = conex.obtenerConexion();
             Statement comando = conn.createStatement();
             ArrayList<AsignarMecanicoVehiculoRepararDAO> ListaProductos=new ArrayList<AsignarMecanicoVehiculoRepararDAO>();
             
@@ -123,7 +123,7 @@ public class AsignarMecanicoVehiculoRepararDAO {
           {
            try{
             conex.conectar();
-            conn = conex.getConexion();
+            conn = conex.obtenerConexion();
             Statement comando = conn.createStatement();
             ArrayList<AsignarMecanicoVehiculoRepararDAO> ListaProductos=new ArrayList<AsignarMecanicoVehiculoRepararDAO>();
             
@@ -155,7 +155,7 @@ public class AsignarMecanicoVehiculoRepararDAO {
           {
            try{
             conex.conectar();
-            conn = conex.getConexion();
+            conn = conex.obtenerConexion();
             Statement comando = conn.createStatement();
             ArrayList<AsignarMecanicoVehiculoRepararDAO> ListaProductos=new ArrayList<AsignarMecanicoVehiculoRepararDAO>();
             
