@@ -17,6 +17,7 @@ public class ControladorPantallaPrincipal implements ActionListener{
     
     JFPantallaPrincipal VistaPrincipal = new JFPantallaPrincipal();
     JDAutomoviles VistaAutos;
+    JDvistaAMVR VistaAMVR;
     public ControladorPantallaPrincipal(JFPantallaPrincipal VistaPrincipal){
         
         this.VistaPrincipal = VistaPrincipal;
@@ -33,6 +34,16 @@ public class ControladorPantallaPrincipal implements ActionListener{
             VistaAutos = new JDAutomoviles(VistaPrincipal, true);
             VistaAutos.setLocationRelativeTo(null);
             VistaAutos.setVisible(true);
+        }else
+        {
+            if(VistaPrincipal.btnAMAUVAR==E.getSource())
+            {
+                VistaAMVR= new JDvistaAMVR(VistaPrincipal,true);
+                VistaAMVR.setLocationRelativeTo(null);
+                VistaAMVR.setVisible(true);
+                
+                
+            }
         }
     }
     
