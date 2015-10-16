@@ -7,7 +7,7 @@ En el diagrama que está abajo,  no están todos los métodos, ustedes tiene que
 
 ![Alt text](http://maplicaciones.azurewebsites.net/wp-content/uploads/2015/10/alfin.png "Diagrama de clases")
 
-mucha ahí está el nuevo diagrama de clases, si puedo les voy a generar el código en netbeas. 
+
 
 
 # LINK PARA DESCARGAR BASE DE DATOS LOCAL
