@@ -26,6 +26,7 @@ public class ControladorPantallaPrincipal implements ActionListener{
         this.VistaPrincipal.btnAgregarAuto.addActionListener(this);
         this.VistaPrincipal.btnRegistrarAnti.addActionListener(this);
         this.VistaPrincipal.btnCanEn.addActionListener(this);
+        this.VistaPrincipal.btnAMAUVAR.addActionListener(this);
     }
     
     public void actionPerformed(ActionEvent E){
