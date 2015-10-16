@@ -18,6 +18,7 @@ public class ControladorPantallaPrincipal implements ActionListener{
     JFPantallaPrincipal VistaPrincipal = new JFPantallaPrincipal();
     JDAutomoviles VistaAutos;
     JDvistaAMVR VistaAMVR;
+    JDMecanico VistaMecanico;
     public ControladorPantallaPrincipal(JFPantallaPrincipal VistaPrincipal){
         
         this.VistaPrincipal = VistaPrincipal;
@@ -45,7 +46,16 @@ public class ControladorPantallaPrincipal implements ActionListener{
                 
                 
             }
+             else
+        {
+            if(VistaPrincipal.btnAgregarMec == E.getSource())
+            {
+                VistaMecanico = new JDMecanico (VistaPrincipal, true);
+                VistaMecanico.setLocationRelativeTo(null);
+                VistaMecanico.setVisible(true);
         }
     }
     
+        }
+    }
 }
