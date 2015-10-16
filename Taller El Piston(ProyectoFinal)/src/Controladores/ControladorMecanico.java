@@ -7,6 +7,7 @@
 package Controladores;
 
 
+import Modelos.MecanicoDAO;
 import Vistas.JDMecanico;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -24,5 +25,7 @@ public class ControladorMecanico implements ActionListener{
     }
     
      public void actionPerformed(ActionEvent E){
-    }
+     MecanicoDAO nuevoMecanico = new MecanicoDAO();
+    nuevoMecanico.InsertarMecanicos(VistaMecanico.txtdpi.getText(), VistaMecanico.txtape.getText(), VistaMecanico.txtnom.getText(),VistaMecanico.txtdire.getText(),VistaMecanico.txttele.getText(),VistaMecanico.txtesp.getText(), VistaMecanico.txtest.getText());
+}
 }

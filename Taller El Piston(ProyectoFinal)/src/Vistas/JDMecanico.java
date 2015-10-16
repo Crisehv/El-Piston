@@ -6,6 +6,8 @@
 
 package Vistas;
 
+import Controladores.ControladorMecanico;
+
 /**
  *
  * @author Joseph
@@ -50,6 +52,11 @@ public class JDMecanico extends javax.swing.JDialog {
         btnsalir = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        addComponentListener(new java.awt.event.ComponentAdapter() {
+            public void componentShown(java.awt.event.ComponentEvent evt) {
+                formComponentShown(evt);
+            }
+        });
 
         jLabel1.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
         jLabel1.setText("MECANICO");
@@ -165,6 +172,10 @@ public class JDMecanico extends javax.swing.JDialog {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void formComponentShown(java.awt.event.ComponentEvent evt) {//GEN-FIRST:event_formComponentShown
+ControladorMecanico ControladorMecanico = new ControladorMecanico(this);        // TODO add your handling code here:
+    }//GEN-LAST:event_formComponentShown
 
     /**
      * @param args the command line arguments
