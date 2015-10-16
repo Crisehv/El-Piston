@@ -3,6 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
+
 package Modelos;
 
 import java.sql.Connection;
@@ -12,43 +13,35 @@ import javax.swing.JOptionPane;
 
 /**
  *
- * @author Julio
+ * @author Joseph
  */
 public class AutosDAO {
-    String Placa;
-    int Modelo;
-    String Tipo;
-    String Color;
-    String Estatus;
-    String DPICliente;
+    String placa;
+    int modelo;
+    String tipo;
+    String color;
+    String estatus;
     
-    Connection Con;
-    ResultSet Consulta;
+    Connection Conn;
+    Conexion Cone = new Conexion();
     
-    //Conexion Conec = new Conexion();
-    
-    public void IngresarAfiliados(){
+    public void InsertarAutos(String placa, int modelo, String tipo, String color, String estatus){
         
+        this.placa= placa;
+        this.modelo= modelo;
+        this.tipo = tipo;
+        this.color = color;
+        this.estatus = estatus;
         
-        /*try
-        {
-             JOptionPane.showMessageDialog(null, Conec.conectar());
-            Con=Conec.getConexion();
-            Statement comando=Con.createStatement();
-            comando.executeUpdate("insert into afiliados() values(NULL,'"+DPI+"', '"+Nombre+"', '"+Apellido+"', '"+NumTel+"', '"+Direccion+"', '"+Edad+"', '"+Departamento+"', '"+Aldea+"', '"+Genero+"')");
-        }
-        catch(Exception e)
-        {
-           JOptionPane.showMessageDialog(null,"hubo un erro al insertar registro"+e);
+        try{
             
+             JOptionPane.showMessageDialog(null, Cone.conectar());
+            Conn = Cone.obtenerConexion();
+            Statement Comando = Conn.createStatement();
+            Comando.executeUpdate("insert into automoviles values( '"+placa+"', '"+modelo+"', '"+tipo+"','"+color+"','"+estatus+"')");
         }
-        
-    
+ catch(Exception E){
+            
+            JOptionPane.showMessageDialog(null, "Ocurrio un error al ingresar los datos..."+E);
     }
-    */
-        
-        
-        
-}
-}
-
+} }
