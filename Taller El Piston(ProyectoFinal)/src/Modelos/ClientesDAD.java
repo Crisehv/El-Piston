@@ -21,8 +21,7 @@ public class ClientesDAD {
     String nombre;
     String direccion;
     String telefono;
-    
-    
+    ResultSet consulta;
     Connection Conn;
     Conexion Cone = new Conexion();
     public void InsertarClientes(String dpiclientes, String apellidos, String nombre, String direccion, String telefono){
@@ -44,4 +43,68 @@ public class ClientesDAD {
             
             JOptionPane.showMessageDialog(null, "Ocurrio un error al ingresar los datos..."+E);
     }
-} }
+} 
+public ResultSet buscar(int codigodpi){
+        
+        try{
+            Cone.conectar();
+            Conn = Cone.obtenerConexion();
+            Statement comando = Conn.createStatement();
+            
+            //Buscar un registro
+            consulta = comando.executeQuery("select * from clientes where dpiclientes="+codigodpi);
+            return consulta;
+        }
+        catch(Exception e){
+            return consulta;
+        }
+    }
+    
+    public String editar(String dpiclientes, String apellidos, String nombre, String direccion, String telefono){
+        
+        String respuesta;
+        
+        try{
+            Cone.conectar();
+            Conn = Cone.obtenerConexion();
+            Statement comando = Conn.createStatement();
+           
+            //Editar registro
+            if (dpiclientes.equals(""))
+                respuesta = "Ingrese un codigo valido";
+            else{
+                comando.executeUpdate("update clientes set apellidos = '"+apellidos+"', nombre = '"+nombre+"', direccion = '"+direccion+"', telefono = '"+telefono+"' where dpiMecanico = "+dpiclientes);
+            respuesta = "Registro actualizado exitosamente";
+            }
+            return respuesta;
+        }
+        
+        catch (Exception e){
+            return "Hubo un error al momento de actualizar..."+e;
+        }
+    }
+    
+    public String eliminar(String dpiclientes, String apellidos, String nombre, String direccion, String telefono){
+        
+        String respuesta;
+        
+        try{
+            Cone.conectar();
+            Conn = Cone.obtenerConexion();
+            Statement comando = Conn.createStatement();
+            
+            //Editar registro
+            if (dpiclientes.equals(""))
+                respuesta = "Ingrese un codigo valido";
+            else{
+                comando.executeUpdate("delete from clientes where dpiclientes = "+dpiclientes);
+            respuesta = "Registro eliminado";
+            }
+            return respuesta;
+        }
+        
+        catch (Exception e){
+            return "Hubo un error al momento de eliminar..."+e;
+        }
+    }
+}
