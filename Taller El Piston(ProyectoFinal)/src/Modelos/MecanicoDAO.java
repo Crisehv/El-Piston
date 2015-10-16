@@ -23,7 +23,7 @@ public class MecanicoDAO {
     String telefono;
     String especialidad;
     String estatus;
-    
+    ResultSet consulta;
     Connection Conn;
     Conexion Cone = new Conexion();
     
@@ -49,5 +49,70 @@ public class MecanicoDAO {
             JOptionPane.showMessageDialog(null, "Ocurrio un error al ingresar los datos..."+E);
     }
 }
+    public ResultSet buscar(int codigodpi){
+        
+        try{
+            Cone.conectar();
+            Conn = Cone.obtenerConexion();
+            Statement comando = Conn.createStatement();
+            
+            //Buscar un registro
+            consulta = comando.executeQuery("select * from mecanicos where dpiMecanico="+codigodpi);
+            return consulta;
+        }
+        catch(Exception e){
+            return consulta;
+        }
+    }
+    
+    public String editar(String dpiMecanico,String apellidos, String nombre, String direccion, String telefono, String especialidad, String estatus){
+        
+        String respuesta;
+        
+        try{
+            Cone.conectar();
+            Conn = Cone.obtenerConexion();
+            Statement comando = Conn.createStatement();
+           
+            //Editar registro
+            if (dpiMecanico.equals(""))
+                respuesta = "Ingrese un codigo valido";
+            else{
+                comando.executeUpdate("update mecanicos set apellidos = '"+apellidos+"', nombre = '"+nombre+"', direccion = '"+direccion+"', telefono = '"+telefono+"', especialidad = '"+especialidad+"', estatus = '"+estatus+"' where dpiMecanico = "+dpiMecanico);
+            respuesta = "Registro actualizado exitosamente";
+            }
+            return respuesta;
+        }
+        
+        catch (Exception e){
+            return "Hubo un error al momento de actualizar..."+e;
+        }
+    }
+    
+    public String eliminar(String dpiMecanico){
+        
+        String respuesta;
+        
+        try{
+            Cone.conectar();
+            Conn = Cone.obtenerConexion();
+            Statement comando = Conn.createStatement();
+            
+            //Editar registro
+            if (dpiMecanico.equals(""))
+                respuesta = "Ingrese un codigo valido";
+            else{
+                comando.executeUpdate("delete from mecanicos where dpiMecanico = "+dpiMecanico);
+            respuesta = "Registro eliminado";
+            }
+            return respuesta;
+        }
+        
+        catch (Exception e){
+            return "Hubo un error al momento de eliminar..."+e;
+        }
+    }
 }
+
+
 
