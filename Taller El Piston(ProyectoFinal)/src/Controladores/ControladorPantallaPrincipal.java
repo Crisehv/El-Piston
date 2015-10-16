@@ -21,6 +21,7 @@ public class ControladorPantallaPrincipal implements ActionListener{
     JDMecanico VistaMecanico;
     JDClientes VistaClientes;
     JDCancelacionYEntregaDV VistaCancelacionYEntrega;
+    JDAnticipo VistaAnticipo;
     
     public ControladorPantallaPrincipal(JFPantallaPrincipal VistaPrincipal){
         
@@ -72,6 +73,11 @@ public class ControladorPantallaPrincipal implements ActionListener{
                 VistaCancelacionYEntrega.setVisible(true);
             }
     
-        
+            if(VistaPrincipal.btnRegistrarAnti == E.getSource())
+            {
+                VistaAnticipo = new JDAnticipo (VistaPrincipal, true);
+                VistaAnticipo.setLocationRelativeTo(null);
+                VistaAnticipo.setVisible(true);
+            }
     }
 }

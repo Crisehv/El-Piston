@@ -165,7 +165,7 @@ public class JDAnticipo extends javax.swing.JDialog {
 
     private void formComponentShown(java.awt.event.ComponentEvent evt) {//GEN-FIRST:event_formComponentShown
         // TODO add your handling code here:
-        ControladorVistaAnticipos ControladorvistaAnticipos = new ControladorVistaAnticipos(this);
+       
     }//GEN-LAST:event_formComponentShown
 
     /**
