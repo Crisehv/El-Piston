@@ -19,6 +19,7 @@ public class ControladorPantallaPrincipal implements ActionListener{
     JDAutoss VistaAutos;
     JDvistaAMVR VistaAMVR;
     JDMecanico VistaMecanico;
+    JDClientes VistaClientes;
     public ControladorPantallaPrincipal(JFPantallaPrincipal VistaPrincipal){
         
         this.VistaPrincipal = VistaPrincipal;
@@ -36,8 +37,8 @@ public class ControladorPantallaPrincipal implements ActionListener{
             VistaAutos = new JDAutoss(VistaPrincipal, true);
             VistaAutos.setLocationRelativeTo(null);
             VistaAutos.setVisible(true);
-        }else
-        {
+        }
+        
             if(VistaPrincipal.btnAMAUVAR==E.getSource())
             {
                 VistaAMVR= new JDvistaAMVR(VistaPrincipal,true);
@@ -46,16 +47,22 @@ public class ControladorPantallaPrincipal implements ActionListener{
                 
                 
             }
-             else
-        {
+            
+        
             if(VistaPrincipal.btnAgregarMec == E.getSource())
             {
                 VistaMecanico = new JDMecanico (VistaPrincipal, true);
                 VistaMecanico.setLocationRelativeTo(null);
                 VistaMecanico.setVisible(true);
         }
-    }
     
-        }
+            if(VistaPrincipal.btnAgregarClien == E.getSource())
+            {
+                VistaClientes = new JDClientes (VistaPrincipal, true);
+                VistaClientes.setLocationRelativeTo(null);
+                VistaClientes.setVisible(true);
+            }
+    
+        
     }
 }
