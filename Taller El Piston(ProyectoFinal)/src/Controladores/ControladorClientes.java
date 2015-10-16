@@ -13,7 +13,7 @@ import java.awt.event.ActionListener;
 
 /**
  *
- * @author herman
+ * @author nitroherman
  */
 public class ControladorClientes implements ActionListener{
     JDClientes VistaClientes;
