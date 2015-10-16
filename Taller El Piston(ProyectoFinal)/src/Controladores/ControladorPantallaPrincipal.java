@@ -20,6 +20,8 @@ public class ControladorPantallaPrincipal implements ActionListener{
     JDvistaAMVR VistaAMVR;
     JDMecanico VistaMecanico;
     JDClientes VistaClientes;
+    JDCancelacionYEntregaDV VistaCancelacionYEntrega;
+    
     public ControladorPantallaPrincipal(JFPantallaPrincipal VistaPrincipal){
         
         this.VistaPrincipal = VistaPrincipal;
@@ -61,6 +63,13 @@ public class ControladorPantallaPrincipal implements ActionListener{
                 VistaClientes = new JDClientes (VistaPrincipal, true);
                 VistaClientes.setLocationRelativeTo(null);
                 VistaClientes.setVisible(true);
+            }
+            
+            if(VistaPrincipal.btnCanEn == E.getSource())
+            {
+                VistaCancelacionYEntrega = new JDCancelacionYEntregaDV (VistaPrincipal, true);
+                VistaCancelacionYEntrega.setLocationRelativeTo(null);
+                VistaCancelacionYEntrega.setVisible(true);
             }
     
         

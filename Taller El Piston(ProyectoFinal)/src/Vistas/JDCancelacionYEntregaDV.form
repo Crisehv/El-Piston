@@ -27,11 +27,11 @@
               <EmptySpace min="-2" pref="37" max="-2" attributes="0"/>
               <Component id="jLabel8" min="-2" max="-2" attributes="0"/>
               <EmptySpace type="separate" max="-2" attributes="0"/>
-              <Component id="TxtCodigoCliente6" max="32767" attributes="0"/>
+              <Component id="TxtCodigoAnticipo" max="32767" attributes="0"/>
               <EmptySpace min="-2" pref="65" max="-2" attributes="0"/>
               <Component id="jLabel9" min="-2" max="-2" attributes="0"/>
               <EmptySpace type="separate" max="-2" attributes="0"/>
-              <Component id="TxtCodigoCliente7" min="-2" pref="114" max="-2" attributes="0"/>
+              <Component id="TxtMontoAnticipo" min="-2" pref="114" max="-2" attributes="0"/>
               <EmptySpace max="32767" attributes="0"/>
           </Group>
           <Group type="102" attributes="0">
@@ -47,7 +47,7 @@
                           <Group type="102" alignment="1" attributes="0">
                               <Component id="jLabel5" min="-2" max="-2" attributes="0"/>
                               <EmptySpace type="separate" max="-2" attributes="0"/>
-                              <Component id="TxtCodigoCliente3" min="-2" pref="120" max="-2" attributes="0"/>
+                              <Component id="TxtPlacaVehiculo" min="-2" pref="120" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
@@ -55,12 +55,12 @@
                           <Group type="102" attributes="0">
                               <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
                               <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                              <Component id="TxtCodigoCliente1" min="-2" pref="120" max="-2" attributes="0"/>
+                              <Component id="TxtNombreCliente" min="-2" pref="120" max="-2" attributes="0"/>
                           </Group>
                           <Group type="102" attributes="0">
                               <Component id="jLabel6" min="-2" max="-2" attributes="0"/>
                               <EmptySpace max="32767" attributes="0"/>
-                              <Component id="TxtCodigoCliente4" min="-2" pref="120" max="-2" attributes="0"/>
+                              <Component id="TxtTipoVehiculo" min="-2" pref="120" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
@@ -68,12 +68,12 @@
                           <Group type="102" attributes="0">
                               <Component id="jLabel7" min="-2" max="-2" attributes="0"/>
                               <EmptySpace max="32767" attributes="0"/>
-                              <Component id="TxtCodigoCliente5" min="-2" pref="120" max="-2" attributes="0"/>
+                              <Component id="TxtEstatusVehiculo" min="-2" pref="120" max="-2" attributes="0"/>
                           </Group>
                           <Group type="102" attributes="0">
                               <Component id="jLabel4" min="-2" max="-2" attributes="0"/>
                               <EmptySpace type="separate" max="-2" attributes="0"/>
-                              <Component id="TxtCodigoCliente2" min="-2" pref="120" max="-2" attributes="0"/>
+                              <Component id="TxtApellidoCliente" min="-2" pref="120" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                   </Group>
@@ -81,7 +81,7 @@
                       <EmptySpace min="-2" pref="183" max="-2" attributes="0"/>
                       <Component id="jLabel10" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Component id="TxtCodigoCliente8" min="-2" pref="114" max="-2" attributes="0"/>
+                      <Component id="TxtMontoCancelar" min="-2" pref="114" max="-2" attributes="0"/>
                   </Group>
               </Group>
               <EmptySpace pref="42" max="32767" attributes="0"/>
@@ -113,32 +113,32 @@
                   <Component id="jLabel2" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="TxtCodigoCliente" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="jLabel3" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="TxtCodigoCliente1" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="TxtNombreCliente" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="jLabel4" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="TxtCodigoCliente2" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="TxtApellidoCliente" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="jLabel5" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="TxtCodigoCliente3" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="TxtPlacaVehiculo" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="jLabel6" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="jLabel7" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="TxtCodigoCliente5" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="TxtCodigoCliente4" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="TxtEstatusVehiculo" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="TxtTipoVehiculo" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace min="-2" pref="46" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="jLabel8" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="TxtCodigoCliente6" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="TxtCodigoAnticipo" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="jLabel9" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="TxtCodigoCliente7" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="TxtMontoAnticipo" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" attributes="0">
                       <EmptySpace min="-2" pref="29" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="jLabel10" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="TxtCodigoCliente8" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="TxtMontoCancelar" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace min="35" pref="80" max="32767" attributes="0"/>
                   </Group>
@@ -165,6 +165,9 @@
       </Properties>
     </Component>
     <Component class="javax.swing.JTextField" name="TxtCodigoCliente">
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+      </AuxValues>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel2">
       <Properties>
@@ -174,7 +177,13 @@
         <Property name="text" type="java.lang.String" value="C&#xf3;digo del cliente:"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="TxtCodigoCliente1">
+    <Component class="javax.swing.JTextField" name="TxtNombreCliente">
+      <Properties>
+        <Property name="enabled" type="boolean" value="false"/>
+      </Properties>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+      </AuxValues>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel3">
       <Properties>
@@ -184,7 +193,13 @@
         <Property name="text" type="java.lang.String" value="Nombre:"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="TxtCodigoCliente2">
+    <Component class="javax.swing.JTextField" name="TxtApellidoCliente">
+      <Properties>
+        <Property name="enabled" type="boolean" value="false"/>
+      </Properties>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+      </AuxValues>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel4">
       <Properties>
@@ -194,7 +209,13 @@
         <Property name="text" type="java.lang.String" value="Apellido:"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="TxtCodigoCliente3">
+    <Component class="javax.swing.JTextField" name="TxtPlacaVehiculo">
+      <Properties>
+        <Property name="enabled" type="boolean" value="false"/>
+      </Properties>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+      </AuxValues>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel5">
       <Properties>
@@ -204,7 +225,13 @@
         <Property name="text" type="java.lang.String" value="Placa:"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="TxtCodigoCliente4">
+    <Component class="javax.swing.JTextField" name="TxtTipoVehiculo">
+      <Properties>
+        <Property name="enabled" type="boolean" value="false"/>
+      </Properties>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+      </AuxValues>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel6">
       <Properties>
@@ -214,7 +241,13 @@
         <Property name="text" type="java.lang.String" value="Tipo:"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="TxtCodigoCliente5">
+    <Component class="javax.swing.JTextField" name="TxtEstatusVehiculo">
+      <Properties>
+        <Property name="enabled" type="boolean" value="false"/>
+      </Properties>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+      </AuxValues>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel7">
       <Properties>
@@ -224,7 +257,10 @@
         <Property name="text" type="java.lang.String" value="Estatus:"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="TxtCodigoCliente6">
+    <Component class="javax.swing.JTextField" name="TxtCodigoAnticipo">
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+      </AuxValues>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel8">
       <Properties>
@@ -234,7 +270,13 @@
         <Property name="text" type="java.lang.String" value="C&#xf3;digo de anticipo:"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="TxtCodigoCliente7">
+    <Component class="javax.swing.JTextField" name="TxtMontoAnticipo">
+      <Properties>
+        <Property name="enabled" type="boolean" value="false"/>
+      </Properties>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+      </AuxValues>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel9">
       <Properties>
@@ -252,7 +294,13 @@
         <Property name="text" type="java.lang.String" value="Monto a cancelar:"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="TxtCodigoCliente8">
+    <Component class="javax.swing.JTextField" name="TxtMontoCancelar">
+      <Properties>
+        <Property name="enabled" type="boolean" value="false"/>
+      </Properties>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+      </AuxValues>
     </Component>
     <Component class="javax.swing.JButton" name="jButton1">
       <Properties>
