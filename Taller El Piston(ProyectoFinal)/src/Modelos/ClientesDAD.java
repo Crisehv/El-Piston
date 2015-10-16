@@ -84,7 +84,7 @@ public ResultSet buscar(int codigodpi){
         }
     }
     
-    public String eliminar(String dpiMecanico){
+    public String eliminar(String dpiclientes, String apellidos, String nombre, String direccion, String telefono){
         
         String respuesta;
         
