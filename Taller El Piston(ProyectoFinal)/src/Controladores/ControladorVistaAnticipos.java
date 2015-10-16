@@ -21,7 +21,8 @@ public class ControladorVistaAnticipos implements ActionListener  {
     JDAnticipo vistaAnticipo;
     String info = "";
     
-    public ControladorVistaAnticipo(JDAnticipo vistaAnticipo){
+    public ControladorVistaAnticipos(JDAnticipo vistaAnticipo){
+       
         this.vistaAnticipo = vistaAnticipo;
         
         vistaAnticipo.BtnBuscarAnticipo.addActionListener(this);
@@ -31,7 +32,9 @@ public class ControladorVistaAnticipos implements ActionListener  {
         vistaAnticipo.txtIdFallaAnticipo.addActionListener(this);
         vistaAnticipo.btnEliminarAnticipo.addActionListener(this);
         vistaAnticipo.txtMontoAnticipo.addActionListener(this);
-        
+    }
+     
+    public void actionPerformed(ActionEvent e){
         //Busqueda
         
         AnticiposDAO fallaABuscar = new AnticiposDAO();
@@ -46,8 +49,8 @@ public class ControladorVistaAnticipos implements ActionListener  {
         catch(Exception es){
             JOptionPane.showMessageDialog(null, "Hubo un erro"+es);
         }
-    }
-    public void actionPerformed(ActionEvent e){
+    
+    
          String info = " ";
          
          info = info + vistaAnticipo.CBIdFalla.getSelectedItem().toString();

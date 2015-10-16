@@ -17,13 +17,14 @@ import javax.swing.JOptionPane;
  */
 public class AutosDAO {
     String placa;
-    int modelo;
+    int modelo,idcliente;
     String tipo;
     String color;
     String estatus;
     
     Connection Conn;
     Conexion Cone = new Conexion();
+    ResultSet consulta;
     
     public void InsertarAutos(String placa, int modelo, String tipo, String color, String estatus){
         
@@ -44,4 +45,20 @@ public class AutosDAO {
             
             JOptionPane.showMessageDialog(null, "Ocurrio un error al ingresar los datos..."+E);
     }
-} }
+    }
+        
+    public ResultSet buscar(int idcliente){
+        try{
+            Cone.conectar();
+            Conn = Cone.obtenerConexion();
+            Statement comando = Conn.createStatement();
+            
+            //Buscar un registro
+            consulta = comando.executeQuery("select * from automoviles where dpiclientes="+idcliente);
+            return consulta;
+        }
+        catch(Exception e){
+            return consulta;
+        }
+    }
+} 
