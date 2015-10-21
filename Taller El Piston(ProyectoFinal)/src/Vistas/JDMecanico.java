@@ -81,7 +81,7 @@ public class JDMecanico extends javax.swing.JDialog {
 
         btneditar.setText("Editar");
 
-        btnsalir.setText("Salir");
+        btnsalir.setText("eliminar");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);

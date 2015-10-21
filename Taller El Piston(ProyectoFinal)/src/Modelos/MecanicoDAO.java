@@ -36,7 +36,7 @@ public class MecanicoDAO {
         this.telefono = telefono;
         this.especialidad = especialidad;
         this.estatus = estatus;
-        
+         JOptionPane.showMessageDialog(null, "listo para ingresar datos");
         try{
             
             
