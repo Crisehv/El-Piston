@@ -77,7 +77,7 @@ public class AutosDAO {
             if (dpiCliente.equals(""))
                 respuesta = "Ingrese un codigo valido";
             else{
-                comando.executeUpdate("update autos set placa = '"+placa+"', modelo = '"+modelo+"', tipo = '"+tipo+"', color = '"+color+"', estatus = '"+estatus+"' where dpiCliente = "+dpiCliente);
+                comando.executeUpdate("update automoviles set placa = '"+placa+"', modelo = '"+modelo+"', tipo = '"+tipo+"', color = '"+color+"', estatus = '"+estatus+"' where dpiCliente = "+dpiCliente);
             respuesta = "Registro actualizado exitosamente";
             }
             return respuesta;
