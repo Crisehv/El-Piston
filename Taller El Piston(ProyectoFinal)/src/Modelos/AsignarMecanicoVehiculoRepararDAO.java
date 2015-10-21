@@ -31,12 +31,15 @@ public class AsignarMecanicoVehiculoRepararDAO {
     /////////////datos para buscar
     String dpimecanico1;
     String nombre;
+    String nombr2;
      String dpimecanico2;
     String apellidos;
+    String dpimecanico3;
     
     public AsignarMecanicoVehiculoRepararDAO(String dpimecanico1, String nombre) {
         this.dpimecanico1 = dpimecanico1;
         this.nombre = nombre;
+        
     }
 
     public String getDpimecanico1() {
@@ -54,6 +57,16 @@ public class AsignarMecanicoVehiculoRepararDAO {
     public void setNombre(String nombre) {
         this.nombre = nombre;
     }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
     
 
@@ -75,6 +88,7 @@ public class AsignarMecanicoVehiculoRepararDAO {
             conn=conex.obtenerConexion();
             Statement comando=conn.createStatement();
             comando.executeUpdate("insert into asignaciones() values(NULL,'"+placa+"','"+dpiMecanico+"','"+idFalla+"')");
+            JOptionPane.showMessageDialog(null, "Ingresado Exitosamente");
         }
         catch(Exception e)
         {
@@ -82,6 +96,10 @@ public class AsignarMecanicoVehiculoRepararDAO {
         }
         
     }
+   
+   
+   
+   
    
     public ArrayList<AsignarMecanicoVehiculoRepararDAO> Busquedageneral()
           {
@@ -92,12 +110,12 @@ public class AsignarMecanicoVehiculoRepararDAO {
             ArrayList<AsignarMecanicoVehiculoRepararDAO> ListaProductos=new ArrayList<AsignarMecanicoVehiculoRepararDAO>();
             
             //buscar
-            consulta=comando.executeQuery("select placa, modelo from automoviles");
+        consulta=comando.executeQuery("select placa, estatus from automoviles");
             
             if(consulta.next())
             {
                 do{
-                    AsignarMecanicoVehiculoRepararDAO nuevoProducto=new AsignarMecanicoVehiculoRepararDAO(consulta.getString("placa"),consulta.getString("modelo"));
+                    AsignarMecanicoVehiculoRepararDAO nuevoProducto=new AsignarMecanicoVehiculoRepararDAO(consulta.getString("placa"),consulta.getString("estatus"));
                     ListaProductos.add(nuevoProducto);
                 }while(consulta.next());
                 return ListaProductos;
@@ -128,12 +146,13 @@ public class AsignarMecanicoVehiculoRepararDAO {
             ArrayList<AsignarMecanicoVehiculoRepararDAO> ListaProductos=new ArrayList<AsignarMecanicoVehiculoRepararDAO>();
             
             //buscar
-            consulta=comando.executeQuery("select dpiMecanico, apellidos from mecanicos");
+           
+             consulta=comando.executeQuery("select dpiMecanico, estatus from mecanicos");
             
             if(consulta.next())
             {
                 do{
-                    AsignarMecanicoVehiculoRepararDAO nuevoProducto=new AsignarMecanicoVehiculoRepararDAO(consulta.getString("dpiMecanico"),consulta.getString("apellidos"));
+                    AsignarMecanicoVehiculoRepararDAO nuevoProducto=new AsignarMecanicoVehiculoRepararDAO(consulta.getString("dpiMecanico"),consulta.getString("estatus"));
                     ListaProductos.add(nuevoProducto);
                 }while(consulta.next());
                 return ListaProductos;
@@ -198,6 +217,36 @@ public class AsignarMecanicoVehiculoRepararDAO {
               return nombre;
                               
             }
+            
+            
+            //actualizacion del estatus en automoviles
+      public String CambioEstatus(String Placa, String estatus){
+      String respuesta;
+        try{
+            conex.conectar();
+            conn = conex.obtenerConexion();
+            Statement comando = conn.createStatement();
+           
+            
+            //Editar registro
+            if (Placa.equals(""))
+                respuesta = "Error";
+            else{
+               
+            
+                comando.executeUpdate("update automoviles set estatus = '"+estatus+"' where placa='"+Placa+"'");
+                
+            
+            respuesta = "Estatus Cambiado = EN REPARACIÓN";
+            }
+            return respuesta;
+        }
+        
+        catch (Exception e){
+            return "Hubo un error al momento de actualizar... aki     "+e;
+        }
+    }
+            
    
    
 }

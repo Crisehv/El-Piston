@@ -16,7 +16,8 @@ public class ControladorAMVR implements ActionListener{
      {
          this.VistaAMVR=VistaAMVR;
          this.VistaAMVR.cmdamvr.addActionListener(this);
-         
+         this.VistaAMVR.btncambio.addActionListener(this);
+         VistaAMVR.txtestatus.setText("En Reparación");
          
          ////busquda 
 
@@ -28,7 +29,7 @@ public class ControladorAMVR implements ActionListener{
             for(int i=0;i<productosencontrados.size();i++)
             {
                 AsignarMecanicoVehiculoRepararDAO NuevoProducto=new AsignarMecanicoVehiculoRepararDAO(productosencontrados.get(i).getNombre(),productosencontrados.get(i).getDpimecanico1());
-                VistaAMVR.JCplaca.addItem(NuevoProducto);
+                VistaAMVR.JCmecanico.addItem(NuevoProducto);
             }
   
         }
@@ -41,17 +42,16 @@ public class ControladorAMVR implements ActionListener{
         
          ////busquda 
 
-        AsignarMecanicoVehiculoRepararDAO productoAbuscar2=new AsignarMecanicoVehiculoRepararDAO();
+        AsignarMecanicoVehiculoRepararDAO buscar2=new AsignarMecanicoVehiculoRepararDAO();
         
-        ArrayList<AsignarMecanicoVehiculoRepararDAO> productosencontrados2;
-      
-       productosencontrados2=productoAbuscar2.Busquedageneral2();
+        ArrayList<AsignarMecanicoVehiculoRepararDAO> encontrado2;
+              encontrado2=buscar2.Busquedageneral2();
         try
         {
-            for(int i=0;i<productosencontrados2.size();i++)
+            for(int i=0;i<encontrado2.size();i++)
             {
-                AsignarMecanicoVehiculoRepararDAO NuevoProducto=new AsignarMecanicoVehiculoRepararDAO(productosencontrados2.get(i).getNombre(),productosencontrados2.get(i).getDpimecanico1());
-                VistaAMVR.JCmecanico.addItem(NuevoProducto);
+                AsignarMecanicoVehiculoRepararDAO NuevoProducto=new AsignarMecanicoVehiculoRepararDAO(encontrado2.get(i).getNombre(),encontrado2.get(i).getDpimecanico1());
+                VistaAMVR.JCplaca.addItem(NuevoProducto);
             }
   
         }
@@ -90,14 +90,18 @@ public class ControladorAMVR implements ActionListener{
      
      public void actionPerformed(ActionEvent E){
         
-         AsignarMecanicoVehiculoRepararDAO nuevaAsignacion=new AsignarMecanicoVehiculoRepararDAO();
-        nuevaAsignacion.Asignacion(VistaAMVR.JCplaca.getSelectedItem().toString(),VistaAMVR.JCmecanico.getSelectedItem().toString(),Integer.parseInt(VistaAMVR.JCidfalla.getSelectedItem().toString()));
-       
+        if(VistaAMVR.cmdamvr==E.getSource())
+            {
+           AsignarMecanicoVehiculoRepararDAO nuevaAsignacion=new AsignarMecanicoVehiculoRepararDAO();
+           AsignarMecanicoVehiculoRepararDAO cambiar=new  AsignarMecanicoVehiculoRepararDAO();
+           nuevaAsignacion.Asignacion(VistaAMVR.JCmecanico.getSelectedItem().toString(),VistaAMVR.JCplaca.getSelectedItem().toString(),Integer.parseInt(VistaAMVR.JCidfalla.getSelectedItem().toString()));
+           JOptionPane.showMessageDialog(null,cambiar.CambioEstatus(VistaAMVR.JCmecanico.getSelectedItem().toString(), VistaAMVR.txtestatus.getText()));    
+         
 }
    
     
     
       
-    
+     }
     
 }
