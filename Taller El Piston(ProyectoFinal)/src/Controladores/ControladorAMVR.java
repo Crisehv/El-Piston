@@ -16,8 +16,9 @@ public class ControladorAMVR implements ActionListener{
      {
          this.VistaAMVR=VistaAMVR;
          this.VistaAMVR.cmdamvr.addActionListener(this);
-         this.VistaAMVR.btncambio.addActionListener(this);
+         
          VistaAMVR.txtestatus.setText("En Reparación");
+         VistaAMVR.txtestatus.setVisible(false);
          
          ////busquda 
 

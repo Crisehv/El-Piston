@@ -37,7 +37,6 @@ public class JDvistaAMVR extends javax.swing.JDialog {
         JCplaca = new javax.swing.JComboBox();
         JCidfalla = new javax.swing.JComboBox();
         txtestatus = new javax.swing.JTextField();
-        btncambio = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         addComponentListener(new java.awt.event.ComponentAdapter() {
@@ -54,7 +53,7 @@ public class JDvistaAMVR extends javax.swing.JDialog {
 
         cmdamvr.setText("Guardar");
 
-        btncambio.setText("Ver");
+        JCidfalla.setSelectedIndex(-1);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -74,17 +73,14 @@ public class JDvistaAMVR extends javax.swing.JDialog {
                     .addComponent(JCidfalla, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(txtestatus, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(btncambio, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(14, Short.MAX_VALUE))
+                .addContainerGap(28, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(67, 67, 67)
+                .addGap(72, 72, 72)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(txtestatus, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btncambio, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(JCmecanico, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel5))
                 .addGap(18, 18, 18)
@@ -97,7 +93,7 @@ public class JDvistaAMVR extends javax.swing.JDialog {
                     .addComponent(JCidfalla, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(45, 45, 45)
                 .addComponent(cmdamvr, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(135, Short.MAX_VALUE))
+                .addContainerGap(141, Short.MAX_VALUE))
         );
 
         pack();
@@ -164,7 +160,6 @@ public class JDvistaAMVR extends javax.swing.JDialog {
     public javax.swing.JComboBox JCidfalla;
     public javax.swing.JComboBox JCmecanico;
     public javax.swing.JComboBox JCplaca;
-    public javax.swing.JButton btncambio;
     public javax.swing.JButton cmdamvr;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel3;
