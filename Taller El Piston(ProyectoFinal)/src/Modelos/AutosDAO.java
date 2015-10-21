@@ -13,7 +13,7 @@ import javax.swing.JOptionPane;
 
 /**
  *
- * @author Joseph
+ * @author Julio 
  */
 public class AutosDAO {
     String placa;
@@ -59,6 +59,56 @@ public class AutosDAO {
         }
         catch(Exception e){
             return consulta;
+        }
+        
+        
+    }
+    
+    public String editar(String placa, int modelo, String tipo, String color, String estatus, String dpiCliente){
+        
+        String respuesta;
+        
+        try{
+            Cone.conectar();
+            Conn = Cone.obtenerConexion();
+            Statement comando = Conn.createStatement();
+           
+            //Editar registro
+            if (dpiCliente.equals(""))
+                respuesta = "Ingrese un codigo valido";
+            else{
+                comando.executeUpdate("update autos set placa = '"+placa+"', modelo = '"+modelo+"', tipo = '"+tipo+"', color = '"+color+"', estatus = '"+estatus+"' where dpiCliente = "+dpiCliente);
+            respuesta = "Registro actualizado exitosamente";
+            }
+            return respuesta;
+        }
+        
+        catch (Exception e){
+            return "Hubo un error al momento de actualizar..."+e;
+        }
+    }
+    
+    public String eliminar(String dpiCliente){
+        
+        String respuesta;
+        
+        try{
+            Cone.conectar();
+            Conn = Cone.obtenerConexion();
+            Statement comando = Conn.createStatement();
+            
+            //Editar registro
+            if (dpiCliente.equals(""))
+                respuesta = "Ingrese un codigo valido";
+            else{
+                comando.executeUpdate("delete from autos where dpiCliente = "+dpiCliente);
+            respuesta = "Registro eliminado";
+            }
+            return respuesta;
+        }
+        
+        catch (Exception e){
+            return "Hubo un error al momento de eliminar..."+e;
         }
     }
 } 

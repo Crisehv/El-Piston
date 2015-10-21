@@ -58,7 +58,7 @@ public class JDAutoss extends javax.swing.JDialog {
         });
 
         jLabel1.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
-        jLabel1.setText("MECANICO");
+        jLabel1.setText("Autos");
 
         jLabel2.setText("DPI CLIENTE:");
 
@@ -89,10 +89,6 @@ public class JDAutoss extends javax.swing.JDialog {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel1)
-                .addGap(131, 131, 131))
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
@@ -122,7 +118,10 @@ public class JDAutoss extends javax.swing.JDialog {
                         .addGap(40, 40, 40)
                         .addComponent(btneditar)
                         .addGap(32, 32, 32)
-                        .addComponent(btnsalir)))
+                        .addComponent(btnsalir))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(148, 148, 148)
+                        .addComponent(jLabel1)))
                 .addContainerGap(52, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
