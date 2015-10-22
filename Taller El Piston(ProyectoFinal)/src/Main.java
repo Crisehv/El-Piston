@@ -1,5 +1,6 @@
 
 import Controladores.*;
+import Modelos.Conexion;
 import Vistas.*;
 
 /*
@@ -18,7 +19,10 @@ public class Main {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        
+       /* 
+        Conexion conexion = new Conexion(); 
+        conexion.conectar();
+        */
         JFPantallaPrincipal frmPantallaPrincipal = new JFPantallaPrincipal();
         ControladorPantallaPrincipal ControladorPrincipal = new ControladorPantallaPrincipal(frmPantallaPrincipal);
         frmPantallaPrincipal.setExtendedState(frmPantallaPrincipal.MAXIMIZED_BOTH);
