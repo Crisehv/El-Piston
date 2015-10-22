@@ -31,6 +31,7 @@ public class ClientesDAD {
         this.nombre = nombre;
         this.direccion = direccion;
         this.telefono = telefono;
+        JOptionPane.showMessageDialog(null, "listo para ingresar datos");
         
          try{
             
