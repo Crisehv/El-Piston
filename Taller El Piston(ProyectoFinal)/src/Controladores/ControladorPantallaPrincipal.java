@@ -22,6 +22,7 @@ public class ControladorPantallaPrincipal implements ActionListener{
     JDClientes VistaClientes;
     JDCancelacionYEntregaDV VistaCancelacionYEntrega;
     JDAnticipo VistaAnticipo;
+    JDFallas VistaFallas;
     
     public ControladorPantallaPrincipal(JFPantallaPrincipal VistaPrincipal){
         
@@ -32,6 +33,7 @@ public class ControladorPantallaPrincipal implements ActionListener{
         this.VistaPrincipal.btnRegistrarAnti.addActionListener(this);
         this.VistaPrincipal.btnCanEn.addActionListener(this);
         this.VistaPrincipal.btnAMAUVAR.addActionListener(this);
+        this.VistaPrincipal.btnfallas.addActionListener(this);
     }
     
     public void actionPerformed(ActionEvent E){
@@ -78,6 +80,12 @@ public class ControladorPantallaPrincipal implements ActionListener{
                 VistaAnticipo = new JDAnticipo (VistaPrincipal, true);
                 VistaAnticipo.setLocationRelativeTo(null);
                 VistaAnticipo.setVisible(true);
+            }
+            if(VistaPrincipal.btnfallas == E.getSource())
+            {
+                VistaFallas = new JDFallas(VistaPrincipal, true);
+                VistaFallas.setLocationRelativeTo(null);
+                VistaFallas.setVisible(true);
             }
     }
 }

@@ -34,8 +34,14 @@ public class JFPantallaPrincipal extends javax.swing.JFrame {
         btnRegistrarAnti = new javax.swing.JButton();
         btnCanEn = new javax.swing.JButton();
         btnAMAUVAR = new javax.swing.JButton();
+        btnfallas = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        addComponentListener(new java.awt.event.ComponentAdapter() {
+            public void componentShown(java.awt.event.ComponentEvent evt) {
+                formComponentShown(evt);
+            }
+        });
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 3, 48)); // NOI18N
         jLabel1.setText("Taller \"El Piston\"");
@@ -43,6 +49,11 @@ public class JFPantallaPrincipal extends javax.swing.JFrame {
         btnAgregarMec.setText("Agregar Mecanicos");
 
         btnAgregarClien.setText("Agregar Clientes");
+        btnAgregarClien.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnAgregarClienActionPerformed(evt);
+            }
+        });
 
         btnAgregarAuto.setText("Agregar Automoviles");
 
@@ -52,22 +63,14 @@ public class JFPantallaPrincipal extends javax.swing.JFrame {
 
         btnAMAUVAR.setText("Asignar mecánico a un vehículo a reparar");
 
+        btnfallas.setText("Fallas");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(btnAgregarMec)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(btnAgregarClien))
-                    .addGroup(layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(btnAgregarAuto)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(btnRegistrarAnti))
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
@@ -76,7 +79,20 @@ public class JFPantallaPrincipal extends javax.swing.JFrame {
                             .addGroup(layout.createSequentialGroup()
                                 .addGap(118, 118, 118)
                                 .addComponent(btnCanEn)))
-                        .addGap(0, 30, Short.MAX_VALUE)))
+                        .addGap(0, 30, Short.MAX_VALUE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(btnAgregarMec)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(btnAgregarClien))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(btnAgregarAuto)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(btnfallas)
+                                .addGap(72, 72, 72)
+                                .addComponent(btnRegistrarAnti)))))
                 .addContainerGap())
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
@@ -99,12 +115,21 @@ public class JFPantallaPrincipal extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 131, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnAgregarAuto)
-                    .addComponent(btnRegistrarAnti))
+                    .addComponent(btnRegistrarAnti)
+                    .addComponent(btnfallas))
                 .addContainerGap())
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btnAgregarClienActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAgregarClienActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnAgregarClienActionPerformed
+
+    private void formComponentShown(java.awt.event.ComponentEvent evt) {//GEN-FIRST:event_formComponentShown
+        // TODO add your handling code here:
+    }//GEN-LAST:event_formComponentShown
 
     /**
      * @param args the command line arguments
@@ -148,6 +173,7 @@ public class JFPantallaPrincipal extends javax.swing.JFrame {
     public javax.swing.JButton btnAgregarMec;
     public javax.swing.JButton btnCanEn;
     public javax.swing.JButton btnRegistrarAnti;
+    public javax.swing.JButton btnfallas;
     private javax.swing.JLabel jLabel1;
     // End of variables declaration//GEN-END:variables
 }
